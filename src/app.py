@@ -42,4 +42,5 @@ if uploaded_file is not None:
 
     files = os.listdir('./chats/')
     for f in files:
-        os.remove(f"./chats/{f}")
+        if f != '.placeholder':
+            os.remove(f"./chats/{f}")
